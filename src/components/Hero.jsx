@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <Box marginBottom={1}>
       <Container>
-        <header style={{ borderBottom: "2px solid #f8f8ff", width: "75%" }}>
+        <header>
           <h1 style={{ color: "#f8f8ff" }}>
             👋 Hey, <br /> 🙋‍♂️ I'm Ross. <br /> 👨‍💻 I like to solve software
             problems.
