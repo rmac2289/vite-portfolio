@@ -1,10 +1,13 @@
 import React from "react";
-import { Layout } from "../layout/Layout";
+import { Card } from "@mui/material";
 
 export const Experience = () => {
   return (
-    <Layout>
-      <h1>Experience</h1>
-    </Layout>
+    <Card>
+      <header>
+        <h1>where I've worked</h1>
+      </header>
+      <div className="experience-main">experience blah blah</div>
+    </Card>
   );
 };

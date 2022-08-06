@@ -1,3 +1,4 @@
+import { CssBaseline } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -9,6 +10,7 @@ import { Experience } from "./Routes/Experience";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <CssBaseline />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />

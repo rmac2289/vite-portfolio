@@ -1,13 +1,15 @@
+import { Container } from "@mui/material";
+import { Toolbar } from "@mui/material";
+import { AppBar } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/nav.css";
 
 export const Nav = () => {
   return (
-    <nav className="nav">
-      <Link to="/about">About Me</Link>
+    <AppBar position="static">
+      <Link to="/about">About</Link>
       <Link to="/experience">Experience</Link>
       <Link to="/contact">Contact</Link>
-    </nav>
+    </AppBar>
   );
 };

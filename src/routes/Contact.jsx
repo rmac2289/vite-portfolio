@@ -1,10 +1,13 @@
 import React from "react";
-import { Layout } from "../layout/Layout";
+import { Card } from "@mui/material";
 
 export const Contact = () => {
   return (
-    <Layout>
-      <h1>Contact</h1>
-    </Layout>
+    <Card>
+      <header>
+        <h1>how to reach me</h1>
+      </header>
+      <div className="contact-main">contact me blah blah</div>
+    </Card>
   );
 };

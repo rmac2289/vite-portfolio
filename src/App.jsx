@@ -1,12 +1,35 @@
 import { useState } from "react";
 import "./App.css";
-import { Layout } from "./layout/Layout";
-
+import { Hero } from "./components/Hero";
+import { About } from "./Routes/About";
+import { Contact } from "./Routes/Contact";
+import { Experience } from "./Routes/Experience";
+import { Projects } from "./routes/Projects";
+import { Box, Container, Stack, Paper } from "@mui/material";
+import "./App.css";
+import { Nav } from "./components/Nav";
 function App() {
   return (
-    <Layout>
-      <div>Hey, I'm Ross</div>
-    </Layout>
+    <>
+      {/* <Nav /> */}
+      <Box padding={2} backgroundColor="#5B2E48">
+        <Hero />
+        <Stack spacing={1}>
+          <Paper sx={{ backgroundColor: "#CD5C5C" }}>
+            <About />
+          </Paper>
+          <Paper sx={{ backgroundColor: "#CEB992" }}>
+            <Experience />
+          </Paper>
+          <Paper sx={{ backgroundColor: "#73937E" }}>
+            <Projects />
+          </Paper>
+          <Paper sx={{ backgroundColor: "#585563" }}>
+            <Contact />
+          </Paper>
+        </Stack>
+      </Box>
+    </>
   );
 }
 
