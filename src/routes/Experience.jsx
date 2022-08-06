@@ -8,9 +8,13 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
 import { data } from "../data";
 import ChowNowLogo from "../assets/chownowLogo.svg";
 import AxosLogo from "../assets/axos-logo.png";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export const Experience = () => {
   const { experience } = data;
   return (
@@ -19,37 +23,68 @@ export const Experience = () => {
         <h1>where I've worked</h1>
       </header>
       <Stack spacing={2}>
-        <Card display="flex">
-          <img src={ChowNowLogo} alt="ChowNow Logo" />
-          <Divider />
-          <Typography>
-            <strong>2022 - Present, QA Engineer</strong>
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText>cool thing 1</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>more cool stuff</ListItemText>
-            </ListItem>
-          </List>
-        </Card>
-        <Card>
-          <img src={AxosLogo} alt="Axos Logo" />
-          <Divider />
-
-          <Typography>
-            <strong>2021 - 2022, SDET</strong>
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText>cool thing 1</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>more cool stuff</ListItemText>
-            </ListItem>
-          </List>
-        </Card>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                width: "95%",
+              }}
+            >
+              <img src={ChowNowLogo} alt="ChowNow Logo" />
+              <Typography sx={{ fontSize: "22px", fontWeight: "500" }}>
+                QA Engineer
+              </Typography>
+            </div>
+          </AccordionSummary>
+          <AccordionDetails>
+            <List>
+              <ListItem>
+                <ListItemText>cool thing 1</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>more cool stuff</ListItemText>
+              </ListItem>
+            </List>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                width: "95%",
+              }}
+            >
+              <img src={AxosLogo} alt="Axos Logo" />
+              <Typography sx={{ fontSize: "22px", fontWeight: "500" }}>
+                SDET
+              </Typography>
+            </div>
+          </AccordionSummary>
+          <AccordionDetails>
+            <List>
+              <ListItem>
+                <ListItemText>cool thing 1</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>more cool stuff</ListItemText>
+              </ListItem>
+            </List>
+          </AccordionDetails>
+        </Accordion>
       </Stack>
     </Card>
   );
